@@ -52,11 +52,15 @@ git clone https://github.com/yourusername/myWeatherApp.git
 cd myWeatherApp
 ```bash
 
+---
+
 ### 2️⃣ Set Up Environment Variables
 Create a .env file in the root directory and add:
 ```bash
 
 OPENWEATHER_API_KEY=your_api_key_here
+
+---
 
 ### 3️⃣ Build and Run Containers
 ```bash
