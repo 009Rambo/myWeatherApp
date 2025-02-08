@@ -31,9 +31,6 @@ myWeatherApp/
 │── docker-compose.yml # Docker Compose for multi-container setup
 │── README.md # Documentation
 
-yaml
-Copy
-Edit
 
 ---
 
@@ -53,62 +50,45 @@ Before running the app, install:
 ```bash
 git clone https://github.com/yourusername/myWeatherApp.git
 cd myWeatherApp
-2️⃣ Set Up Environment Variables
+### 2️⃣ Set Up Environment Variables
 Create a .env file in the root directory and add:
+```bash
 
 OPENWEATHER_API_KEY=your_api_key_here
 
-3️⃣ Build and Run Containers
-bash
-Copy
-Edit
+### 3️⃣ Build and Run Containers
+```bash
 sudo docker-compose up -d --build
-4️⃣ Check Running Containers
-bash
-Copy
-Edit
+### 4️⃣ Check Running Containers
+```bash
 sudo docker ps
-5️⃣ Access the App
+### 5️⃣ Access the App
 Open in browser: http://localhost
 API Test:
-bash
-Copy
-Edit
+```bash
 curl http://localhost/api/weather?city=Helsinki
-🏗️ Deployment (Pouta Cloud / Dedicated Server)
-1️⃣ Set Up Pouta VM
+## 🏗️ Deployment (Pouta Cloud / Dedicated Server)
+### 1️⃣ Set Up Pouta VM
 Log into the Pouta server:
-
-bash
-Copy
-Edit
+```bash
 ssh ramesh@your_pouta_server_ip
-Update & install Docker:
-
-bash
-Copy
-Edit
+### Update & install Docker:
+```bash
 sudo apt update && sudo apt install -y docker.io docker-compose
-2️⃣ Deploy the App
-bash
-Copy
-Edit
+### 2️⃣ Deploy the App
+```bash
 git clone https://github.com/yourusername/myWeatherApp.git
 cd myWeatherApp
 sudo docker-compose up -d --build
-3️⃣ Configure Firewall
-bash
-Copy
-Edit
+### 3️⃣ Configure Firewall
+```bash
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 sudo ufw enable
-4️⃣ Access the App on Pouta Public IP
-arduino
-Copy
-Edit
+### 4️⃣ Access the App on Pouta Public IP
+```bash
 http://your_pouta_server_ip
-⚙️ Technical Overview
+## ⚙️ Technical Overview
 🔹 Frontend (NGINX + JavaScript)
 The frontend is a static site served by NGINX.
 Uses JavaScript (script.js) to fetch weather data from the backend.
@@ -119,10 +99,8 @@ Fetches weather data from OpenWeather API.
 Exposed on port 4000 and connected to the frontend via NGINX.
 🔹 Docker & Docker Compose
 The app is containerized using Docker.
-docker-compose.yml defines the multi-container setup:
-yaml
-Copy
-Edit
+### docker-compose.yml defines the multi-container setup:
+```bash
 services:
   backend:
     build: ./backend
@@ -143,54 +121,44 @@ services:
 networks:
   myweatherapp_network:
     driver: bridge
-🛠️ Managing the App
+## 🛠️ Managing the App
 🛑 Stop the Containers
-bash
-Copy
-Edit
+```bash
 sudo docker-compose down
-🔄 Restart the App
-bash
-Copy
-Edit
+### 🔄 Restart the App
+```bash
 sudo docker-compose up -d
-🐳 View Logs
-bash
-Copy
-Edit
+### 🐳 View Logs
+```bash
 sudo docker-compose logs -f
-🔄 Rebuild After Code Changes
-bash
-Copy
-Edit
+### 🔄 Rebuild After Code Changes
+```bash
 sudo docker-compose up -d --build
-🔒 Security Best Practices
+### 🔒 Security Best Practices
 Use .env file for sensitive API keys.
-Enable HTTPS with Let's Encrypt:
-bash
-Copy
-Edit
+### Enable HTTPS with Let's Encrypt:
+```bash
 sudo apt install certbot python3-certbot-nginx
 sudo certbot --nginx -d yourdomain.com
-📝 Future Enhancements
+## 📝 Future Enhancements
 ✅ Add unit tests with pytest.
 ✅ Implement CI/CD pipeline using GitHub Actions.
 ✅ Deploy with Kubernetes instead of Docker Compose.
-🤝 Contributing
+## 🤝 Contributing
 Fork the repository.
 Create a new branch (git checkout -b feature-new).
 Commit changes (git commit -m 'Added new feature').
 Push to GitHub (git push origin feature-new).
 Open a Pull Request.
-💡 Troubleshooting
+## 💡 Troubleshooting
 Issue	Solution
 Backend not responding	Run docker logs myweatherapp_backend_1
 Frontend fails to connect to API	Check nginx.conf proxy settings
 API key not working	Update .env and restart app
-📜 License
+## 📜 License
 This project is licensed under the MIT License.
 
-👨‍💻 Author
+## 👨‍💻 Author
 Developed by Ramesh & Team 🚀
 For any issues, contact: pandey.ramesh009@gmail.com
 
