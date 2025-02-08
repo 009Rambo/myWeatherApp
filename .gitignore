@@ -1,0 +1,41 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Python dependencies
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Docker files
+docker-compose.yml
+docker-compose.override.yml
+*.container
+*.tar
+
+# Ignore environment variables (Security!)
+.env
+.env.local
+.env.production
+config.json
+
+# Build and output files
+dist/
+build/
+coverage/
+
+# VS Code & IDE files
+.vscode/
+.idea/
+*.swp
