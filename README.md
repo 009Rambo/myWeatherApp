@@ -17,7 +17,19 @@ A simple weather application that fetches real-time weather data from OpenWeathe
 
 ## 🏗️ Project Structure
 
-myWeatherApp/ │── backend/ │ ├── app.py # Flask API handling weather requests │ ├── requirements.txt # Dependencies for Python backend │ ├── Dockerfile # Docker setup for backend │ │── frontend/ │ ├── index.html # Frontend HTML │ ├── script.js # Fetches weather data from backend │ ├── styles.css # Styling for frontend │ ├── nginx.conf # NGINX reverse proxy configuration │ ├── Dockerfile # Docker setup for frontend │ │── docker-compose.yml # Docker Compose for multi-container setup │── README.md # Documentation
+myWeatherApp/
+│── backend/ 
+│ ├── app.py # Flask API handling weather requests
+  ├── requirements.txt # Dependencies for Python backend
+│ ├── Dockerfile # Docker setup for backend
+│── frontend/ 
+│ ├── index.html # Frontend HTML 
+│ ├── script.js # Fetches weather data from backend
+│ ├── styles.css # Styling for 
+│ ├── nginx.conf # NGINX reverse proxy configuration
+│ ├── Dockerfile # Docker setup for frontend 
+│── docker-compose.yml # Docker Compose for multi-container setup
+│── README.md # Documentation
 
 yaml
 Copy
@@ -44,10 +56,8 @@ cd myWeatherApp
 2️⃣ Set Up Environment Variables
 Create a .env file in the root directory and add:
 
-env
-Copy
-Edit
 OPENWEATHER_API_KEY=your_api_key_here
+
 3️⃣ Build and Run Containers
 bash
 Copy
