@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 COPY . /app/
 
 # Set the environment variable for the API key
-ENV OPENWEATHER_API_KEY=043f4328cde7d9cecc8654622948723f
+ENV OPENWEATHER_API_KEY=your_API_KEY
 
 # Expose the port the app will run on
 EXPOSE 4000
