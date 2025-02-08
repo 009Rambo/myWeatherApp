@@ -16,6 +16,7 @@ A simple weather application that fetches real-time weather data from OpenWeathe
 ---
 
 ## 🏗️ Project Structure
+```bash
 
 myWeatherApp/
 │── backend/ 
@@ -31,7 +32,7 @@ myWeatherApp/
 │── docker-compose.yml # Docker Compose for multi-container setup
 │── README.md # Documentation
 
-
+```
 ---
 
 ## 📦 Prerequisites
@@ -48,7 +49,7 @@ Before running the app, install:
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/yourusername/myWeatherApp.git
+git clone https://github.com/009Rambo/myWeatherApp.git
 cd myWeatherApp
 ```
 
@@ -82,7 +83,7 @@ curl http://localhost/api/weather?city=Helsinki
 ### 1️⃣ Set Up Pouta VM
 Log into the Pouta server:
 ```bash
-ssh ramesh@your_pouta_server_ip
+ssh user@your_pouta_server_ip
 ```
 ### Update & install Docker:
 ```bash
@@ -90,7 +91,7 @@ sudo apt update && sudo apt install -y docker.io docker-compose
 ```
 ### 2️⃣ Deploy the App
 ```bash
-git clone https://github.com/yourusername/myWeatherApp.git
+git clone https://github.com/009Rambo/myWeatherApp.git
 cd myWeatherApp
 sudo docker-compose up -d --build
 ```
@@ -109,10 +110,12 @@ http://your_pouta_server_ip
 The frontend is a static site served by NGINX.
 Uses JavaScript (script.js) to fetch weather data from the backend.
 Configured using nginx.conf to route API calls.
+
 🔹 Backend (Flask API)
 The backend is a Flask API running on Python.
 Fetches weather data from OpenWeather API.
 Exposed on port 4000 and connected to the frontend via NGINX.
+
 🔹 Docker & Docker Compose
 The app is containerized using Docker.
 ### docker-compose.yml defines the multi-container setup:
@@ -164,19 +167,24 @@ sudo certbot --nginx -d yourdomain.com
 ```
 ## 📝 Future Enhancements
 ✅ Add unit tests with pytest.
+
 ✅ Implement CI/CD pipeline using GitHub Actions.
+
 ✅ Deploy with Kubernetes instead of Docker Compose.
+
 ## 🤝 Contributing
 Fork the repository.
 Create a new branch (git checkout -b feature-new).
 Commit changes (git commit -m 'Added new feature').
 Push to GitHub (git push origin feature-new).
 Open a Pull Request.
+
 ## 💡 Troubleshooting
 Issue	Solution
-Backend not responding	Run docker logs myweatherapp_backend_1
-Frontend fails to connect to API	Check nginx.conf proxy settings
-API key not working	Update .env and restart app
+Backend not responding:	Run docker logs myweatherapp_backend_1
+Frontend fails to connect to API:	Check nginx.conf proxy settings
+API key not working:	Update .env and restart app
+
 ## 📜 License
 This project is licensed under the MIT License.
 
