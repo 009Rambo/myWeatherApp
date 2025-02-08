@@ -1,7 +1,8 @@
 
 # 🌦️ Weather App
 
-A simple weather application that fetches real-time weather data from OpenWeather API and displays it on a frontend web page. The app is built using a **Flask backend**, a **JavaScript-based frontend**, and **Docker** for containerization.
+A simple weather application that fetches real-time weather data from OpenWeather API and displays it on a frontend web page. 
+The app is built using a **Flask backend**, a **JavaScript-based frontend**, and **Docker** for containerization.
 
 ---
 
@@ -21,7 +22,7 @@ A simple weather application that fetches real-time weather data from OpenWeathe
 myWeatherApp/
 │── backend/ 
 │ ├── app.py # Flask API handling weather requests
-  ├── requirements.txt # Dependencies for Python backend
+│ ├── requirements.txt # Dependencies for Python backend
 │ ├── Dockerfile # Docker setup for backend
 │── frontend/ 
 │ ├── index.html # Frontend HTML 
@@ -173,14 +174,19 @@ sudo certbot --nginx -d yourdomain.com
 ✅ Deploy with Kubernetes instead of Docker Compose.
 
 ## 🤝 Contributing
-Fork the repository.
-Create a new branch (git checkout -b feature-new).
-Commit changes (git commit -m 'Added new feature').
-Push to GitHub (git push origin feature-new).
-Open a Pull Request.
+1. Fork the repository.
+
+2. Create a new branch (git checkout -b feature-new).
+
+3. Commit changes (git commit -m 'Added new feature').
+
+4. Push to GitHub (git push origin feature-new).
+
+5. Open a Pull Request.
 
 ## 💡 Troubleshooting
-Issue	Solution
+Issue:	Solution
+
 Backend not responding:	Run docker logs myweatherapp_backend_1
 
 Frontend fails to connect to API:	Check nginx.conf proxy settings
