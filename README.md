@@ -50,7 +50,7 @@ Before running the app, install:
 ```bash
 git clone https://github.com/yourusername/myWeatherApp.git
 cd myWeatherApp
-```bash
+```
 
 ---
 
@@ -59,41 +59,51 @@ Create a .env file in the root directory and add:
 ```bash
 
 OPENWEATHER_API_KEY=your_api_key_here
-
+```
 ---
 
 ### 3️⃣ Build and Run Containers
 ```bash
 sudo docker-compose up -d --build
+```
+---
+
 ### 4️⃣ Check Running Containers
 ```bash
 sudo docker ps
+```
 ### 5️⃣ Access the App
 Open in browser: http://localhost
 API Test:
 ```bash
 curl http://localhost/api/weather?city=Helsinki
+```
 ## 🏗️ Deployment (Pouta Cloud / Dedicated Server)
 ### 1️⃣ Set Up Pouta VM
 Log into the Pouta server:
 ```bash
 ssh ramesh@your_pouta_server_ip
+```
 ### Update & install Docker:
 ```bash
 sudo apt update && sudo apt install -y docker.io docker-compose
+```
 ### 2️⃣ Deploy the App
 ```bash
 git clone https://github.com/yourusername/myWeatherApp.git
 cd myWeatherApp
 sudo docker-compose up -d --build
+```
 ### 3️⃣ Configure Firewall
 ```bash
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 sudo ufw enable
+```
 ### 4️⃣ Access the App on Pouta Public IP
 ```bash
 http://your_pouta_server_ip
+```
 ## ⚙️ Technical Overview
 🔹 Frontend (NGINX + JavaScript)
 The frontend is a static site served by NGINX.
@@ -127,25 +137,31 @@ services:
 networks:
   myweatherapp_network:
     driver: bridge
+```
 ## 🛠️ Managing the App
 🛑 Stop the Containers
 ```bash
 sudo docker-compose down
+```
 ### 🔄 Restart the App
 ```bash
 sudo docker-compose up -d
+```
 ### 🐳 View Logs
 ```bash
 sudo docker-compose logs -f
+```
 ### 🔄 Rebuild After Code Changes
 ```bash
 sudo docker-compose up -d --build
+```
 ### 🔒 Security Best Practices
 Use .env file for sensitive API keys.
 ### Enable HTTPS with Let's Encrypt:
 ```bash
 sudo apt install certbot python3-certbot-nginx
 sudo certbot --nginx -d yourdomain.com
+```
 ## 📝 Future Enhancements
 ✅ Add unit tests with pytest.
 ✅ Implement CI/CD pipeline using GitHub Actions.
