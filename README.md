@@ -182,7 +182,9 @@ Open a Pull Request.
 ## 💡 Troubleshooting
 Issue	Solution
 Backend not responding:	Run docker logs myweatherapp_backend_1
+
 Frontend fails to connect to API:	Check nginx.conf proxy settings
+
 API key not working:	Update .env and restart app
 
 ## 📜 License
