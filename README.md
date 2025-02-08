@@ -3,7 +3,7 @@
 
 A simple weather application that fetches real-time weather data from OpenWeather API and displays it on a frontend web page. 
 The app is built using a **Flask backend**, a **JavaScript-based frontend**, and **Docker** for containerization.
-![Alt Text](weatherApp.jpg)
+![Alt Text](myWeatherApp.png)
 
 
 ---
