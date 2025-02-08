@@ -50,6 +50,7 @@ Before running the app, install:
 ```bash
 git clone https://github.com/yourusername/myWeatherApp.git
 cd myWeatherApp
+```bash
 
 ### 2️⃣ Set Up Environment Variables
 Create a .env file in the root directory and add:
